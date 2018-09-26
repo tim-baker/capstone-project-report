@@ -1,8 +1,6 @@
 % Chapter Template
-
-\chapter{Literature Review} % Main chapter title
-
-\label{Chapter1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+\chapter{Literature Review}
+\label{Literature Review} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 %----------------------------------------------------------------------------------------
 %   BACKGROUND
@@ -36,11 +34,19 @@ However, there may be sensors embedded in many other forms of infrastructure tha
 
 \section{The Internet of Things}
 
-Wireless sensor networks (WSNs) form the back-bone of the Internet of Things. According to the IEC (2016), “A wireless sensor network is a network formed by a large number of sensor nodes where each node is equipped with a sensor to detect physical phenomena such as light, heat, pressure, etc.”.
+Wireless sensor networks (WSNs) form the back-bone of the Internet of Things. According to the IEC (2016), “A wireless sensor network is a network formed by a large number of sensor nodes where each node is equipped with a sensor to detect physical phenomena such as light, heat, pressure, etc.”. WSNs are discussed in detail in Wireless Sensor Networks.
+However, the IoT is much more than just the hardware. In 1999, Kevin Ashton was believed to have been the first to use the term Internet of Things (IoT). He explained that his intended meaning was about connecting physical things to the digital world, as is only natural for physical people (Ashton 2009). Rose (2014) describes the connected nature of these things as making them ‘enchanted’. By the idea of ‘enchanted objects’, he means the creation of ordinary things that have extra-ordinary capabilities. Some examples given include a mirror that can aid one’s fashion decision in a fitting room, an umbrella that knows the weather forecast, or a garbage bin that encourages its user to live sustainably.
 
-However, the IoT is much more than just hardware. In 1999, Kevin Ashton is believed to have been the first to use the term Internet of Things (IoT). He explained that his intended meaning was about connecting physical things to the digital world, as is only natural for physical people (Ashton 2009). Rose (2014) describes the connected nature of these things as making them “enchanted”. He explains that the idea of “enchanted objects” speaks of the emergence of ordinary things which have extra-ordinary capabilities. Some examples given include a mirror that can aid one’s fashion decisions in a store, an umbrella that knows the weather forecast, or a garbage bin that makes suggestions.
+\begin{figure}
+    \centering
+    \includegraphics{iot-elements.jpg}
+    \caption{Elements of the Internet of Things (Al-Fuqaha et al. 2015)}
+    \label{fig:iot-elements}
+\end{figure}
 
-Therefore, it is important to understand where this research topic fits in the scheme of the Internet of Things. Even though a full-stack solution will not be developed, the experimental prototype hardware connects physical quantities to the digital realm. This is the first step to creating an IoT solution.
+It is important to understand where my research topic fits in the scheme of the Internet of Things. Even though a fully-integrated solution will not be developed in this project, an experimental prototype is planned to connect physical quantities to the most basic of a digital ecosystem using a single-board computer.
+
+This research covers the first 3 elements of an IoT solution, aiming to identify, sense and communicate data to and from wireless sensor nodes.
 
 %----------------------------------------------------------------------------------------
 %   MICRO AERIAL VEHICLES
@@ -48,7 +54,11 @@ Therefore, it is important to understand where this research topic fits in the s
 
 \section{Micro Aerial Vehicles}
 
-Micro aerial vehicles (MAVs), or drones as they are referred to in the media, have been used for many novel applications – ranging from disaster relief to taking remote-control self-portrait photographs (Lily Robotics 2015). They come in many varieties which generally fall under two categories: rotary– and fixed–wing.
+Micro aerial vehicles (MAVs), or drones as they are referred to in the media, have been used for many novel applications – ranging from disaster relief to taking remote-control self-portraits (Lily Robotics 2015). They come in many varieties which generally fall under two categories: rotary- and fixed-wing.
+
+MAVs are a subset of unmanned aerial vehicles (UAVs) which are of a reduced size compared to full-size autonomous aeroplanes such as military drones. Due to their size, MAVs lend well to research applications in which space is of the essence. Given a variety of payloads and sensor suites, these versatile aerial platforms have enabled much innovative research.
+For example, a research centre in Switzerland have created a swarm of ‘ultra-light’ MAVs that dynamically link to each other in a mesh network configuration (Jimenez-Pacheco et al. 2012).
+The UAV Challenge 2016 competition held in outback Australia focused on the development of a UAV or MAV to retrieve a blood sample from a house-ridden patient located in a remote location (BBC 2016). In both of these examples we see MAVs transporting something, whether it’s data or a physical blood sample.
 
 %----------------------------------------------------------------------------------------
 %       ROTARY WING
@@ -56,7 +66,20 @@ Micro aerial vehicles (MAVs), or drones as they are referred to in the media, ha
 
 \subsection{Rotary Wing}
 
-Recently there has been explosion of rotary-wing type platforms, multi-rotors, popping up on crowd-funding platforms such as Kickstarter, and Indiegogo with many a novel and not-so-novel application. These platforms are traditionally used for short and fast flights where the ability to hover in-place and perform a vertical take-off and landing (VTOL) are essential.
+Recently there has been explosion of rotary-wing type platforms, multi-rotors, popping up on crowd-funding platforms such as Kickstarter, and Indiegogo with many a novel and not-so-novel applications. These platforms are traditionally used for short and fast flights where the ability to hover in-place and perform a vertical take-off and landing (VTOL) are essential.
+
+The most common COTS multi-rotor configuration is the 4-bladed ‘quadcopter’. This relies on the independent control of 4 vertically mounted brushless DC motors at the vertices of a quadrangle. Having 4 motors allows for redundancy of 1 motor, with an emergency landing manoeuvre able to be performed in the event of that occurring. A flight controller is necessary to fly these devices manually due to the inherent unstable nature of the system, which complicates the system. Due to their demand for electrical power, quadcopters are almost always powered by energy dense lithium-polymer batteries, typically ranging from 12.6 to 16.8 volts (3S and 4S packs).
+
+\begin{figure}
+    \centering
+    \includegraphics{3dr-iris.jpg}
+    \caption{Image of the IRIS+ multi-rotor development platform (3DR 2016)}
+    \label{fig:3dr-iris}
+\end{figure}
+
+These types of platforms only have a nominal flight time of 20 minutes, making them very power hungry. This is due to a trade-off between manoeuvrability and endurance. The ability to hover and to land is ideal for densely populated areas with many trees and buildings.
+
+Another type of rotary wing platform includes the traditional helicopter configuration, with a single rotor to provide upwards lift (and thrust) and a tail rotor to control yaw movement. This setup is mechanically more complex than a multi-rotor due to the variable pitch blades and swashplate mechanism, but it has proven to be a robust system for many decades on passenger helicopter systems.
 
 %----------------------------------------------------------------------------------------
 %       FIXED WING
@@ -259,7 +282,7 @@ The ZigBee® PRO leverages the benefits of the partially-connected mesh network 
 
 The selling points of ZigBee® are increased reliability, interoperability, and low-power operation. Reliability is achieved by the self-healing nature of mesh networks, eliminating any single points of failure. Interoperability is claimed, but this is only when different vendors create hardware that adheres to the ZigBee® standard.
 
-For example, if a collection of smart light bulbs from different brands were installed, they could work cooperatively, listening to packets sent via a centralised controller or gateway. Low-power operation is achieved by the low data rate (20-250 kbps), coupled with the ability to broadcast data via a microcontroller within a very short period of time, enabling battery-less energy harvesting transmitter designs.
+For example, if a collection of connected light bulbs from different brands were installed, they could work cooperatively, listening to packets sent via a centralised controller or gateway. Low-power operation is achieved by the low data rate (20-250 kbps), coupled with the ability to broadcast data via a microcontroller within a very short period of time, enabling battery-less energy harvesting transmitter designs.
 
 \subsection{Wireless Local Area Networks}
 
