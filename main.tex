@@ -56,7 +56,7 @@ headsepline, % Uncomment to get a line under the header
 	paper=a4paper, % Change to letterpaper for US letter
 	inner=3.0cm, % Inner margin
 	outer=1.5cm, % Outer margin
-	bindingoffset=0cm, % Binding offset
+	bindingoffset=1.0cm, % Binding offset
 	top=1.0cm, % Top margin
 	bottom=1.0cm, % Bottom margin
 	%showframe,% show how the type block is set on the page
@@ -67,22 +67,19 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \thesistitle{Acquisition of Outdoor Air Quality Data via Micro Aerial Vehicles} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
-\supervisor{Dr. Zenon \textsc{Chaczko}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
-\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\supervisor{Dr Zenon \textsc{Chaczko}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{Mr Jan \textsc{Szymanski}} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Bachelor of Engineering (Honours), major in Electrical Engineering} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
 \author{Timothy \textsc{Baker}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
 \subject{Electrical Engineering} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
-\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.uts.edu.au}{University of Technology Sydney}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 \department{\href{https://www.uts.edu.au/about/faculty-engineering-and-information-technology/electrical-and-data-engineering}{School of Electrical and Data Engineering}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
 \faculty{\href{http://www.uts.edu.au/about/faculty-engineering-and-information-technology}{Faculty of Engineering and Information Technology}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
-\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 
 \begin{document}
 
@@ -107,7 +104,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{mailto:Timothy.A.Baker-1@student.uts.edu.au}{\authorname} % Author name - remove the \href bracket to remove the link
+\href{https://www.linkedin.com/in/timothyabaker1/}{\authorname} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
@@ -172,7 +169,11 @@ headsepline, % Uncomment to get a line under the header
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+The built environment is becoming increasingly polluted. Residents of urban environments  should have the right to access quantitative data about how pollution may be adversely affecting their physical health. Citizens place their trust in government authorities to monitor and regulate the air quality of public spaces. However, these methods require large, costly and stationary monitoring stations. Low-powered wide area networks (LPWANs) are fast becoming a reality in such environments, such as those built on sub-GHz radio frequency modulation techniques and new cellular technologies. LPWANs form part of the Internet of Things (IoT), allowing for great numbers of small, cheap and mobile sensor nodes to be deployed to monitor the environment.
+
+This project proposes a reference design for a mobile air quality monitoring system consisting of commercial off-the-shelf sub-systems, mounted in a micro-aerial vehicle (MAV) platform. It explores the merits of new and existing wireless technologies and realises the system as a LoRaWAN™ endpoint. In collaboration with an industrial partner, Built Environment Optimisation Pty Ltd, this MAV-based system was integrated with an existing open-source LoRaWAN™ network, The Things Network, to prove the feasibility of transporting air quality data to the cloud for use in various applications. An assessment and evaluation of this implementation is provided for the benefit of future engineering students and makers.
+
+The results of this project demonstrate that air quality data can be transmitted to the cloud from endpoints, cheaply and effectively. Integration with a LPWAN was the focus on this project as is highlighted the commercial viability and technical feasibility of the reference design. The autonomous flight aspects of the MAV platform were not explored past initial testing as this was deemed outside the core topic of interest.
 
 \end{abstract}
 
@@ -203,40 +204,32 @@ The acknowledgments and the people to thank go here, don't forget to include you
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+\textbf{API} & \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface\\
+\textbf{BLE} & \textbf{B}luetooth \textbf{L}ow \textbf{E}nergy\\
+\textbf{CASA} & \textbf{C}ivil \textbf{A}viation \textbf{S}afety \textbf{A}uthority\\
+\textbf{COTS} & \textbf{C}ommercial \textbf{O}ff \textbf{T}he \textbf{S}helf\\
+\textbf{GSM} & \textbf{G}lobal \textbf{S}ystem of \textbf{M}obile communication\\
+\textbf{IDE} & \textbf{I}ntegrated \textbf{D}evelopment \textbf{E}nvironment\\
+\textbf{IoT} & \textbf{I}nternet \textbf{o}f \textbf{T}hings\\
+\textbf{Li-Po} & \textbf{Li}thium-\textbf{Po}lymer\\
+\textbf{LPWAN} & \textbf{L}ow-\textbf{P}ower \textbf{W}ide \textbf{A}rea \textbf{N}etwork\\
+\textbf{WLAN} & \textbf{W}ireless \textbf{L}ocal \textbf{A}rea \textbf{N}etwork\\
+\textbf{MAC} & \textbf{M}edia \textbf{A}ccess \textbf{C}ontrol\\
+\textbf{MAV} & \textbf{M}icro \textbf{A}erial \textbf{V}ehicle\\
+\textbf{NB-IoT} & \textbf{N}arrow \textbf{B}and \textbf{I}nternet \textbf{o}f \textbf{T}hings\\
+\textbf{NFC} & \textbf{N}ear \textbf{F}ield \textbf{C}ommunication\\
+\textbf{OTA} & \textbf{O}ver \textbf{T}he \textbf{A}ir\\
+\textbf{PAN} & \textbf{P}ersonal \textbf{A}rea \textbf{N}etwork\\
+\textbf{PDU} & \textbf{P}rotocol \textbf{D}ata \textbf{U}nit\\
+\textbf{PHY} & \textbf{Phy}sical Layer\\
+\textbf{RFID} & \textbf{R}adio \textbf{F}requency \textbf{Id}entification\\
+\textbf{SATCOM} & \textbf{Sat}ellite \textbf{Com}munications\\
+\textbf{UAV} & \textbf{U}nmanned \textbf{A}erial \textbf{V}ehicle\\
+\textbf{VTOL} & \textbf{V}ertical \textbf{T}ake-\textbf{O}ff and \textbf{L}anding\\
+\textbf{WAN} & \textbf{W}ide \textbf{A}rea \textbf{N}etwork\\
 \textbf{WSN} & \textbf{W}ireless \textbf{S}ensor \textbf{N}etwork\\
 
 \end{abbreviations}
-
-%----------------------------------------------------------------------------------------
-%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
-%----------------------------------------------------------------------------------------
-
-\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
-
-% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
-
-	Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
-%Constant Name & $Symbol$ & $Constant Value$ with units\\
-
-\end{constants}
-
-%----------------------------------------------------------------------------------------
-%	SYMBOLS
-%----------------------------------------------------------------------------------------
-
-\begin{symbols}{lll} % Include a list of Symbols (a three column table)
-
-$a$ & distance & \si{\meter} \\
-$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
-%Symbol & Name & Unit \\
-
-\addlinespace % Gap to separate the Roman symbols from the Greek
-
-$\omega$ & angular frequency & \si{\radian} \\
-
-\end{symbols}
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
@@ -257,7 +250,7 @@ $\omega$ & angular frequency & \si{\radian} \\
 
 \include{Chapters/Chapter1}
 \include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
+\include{Chapters/Chapter3}
 %\include{Chapters/Chapter4} 
 %\include{Chapters/Chapter5} 
 
